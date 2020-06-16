@@ -1682,7 +1682,7 @@ class DNSAuthGraph:
         node_trusted = n.attr['color'] == COLORS['secure']
 
         if is_dnskey and not node_trusted:
-            # Here we are shortcutting the traversal because we are no longer
+            # Here we are short circuiting the traversal because we are no longer
             # propagating trust.  But we still need to learn of any DLV nodes.
             if not force:
                 S = self.G.get_subgraph(top_name[:-4])

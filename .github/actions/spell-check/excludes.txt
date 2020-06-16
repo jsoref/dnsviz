@@ -1,0 +1,5 @@
+\.gz$
+^doc/images/
+^external/
+^share/trusted-keys/
+^tests/zone/

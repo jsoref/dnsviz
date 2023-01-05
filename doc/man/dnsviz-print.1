@@ -172,7 +172,7 @@ The following is an example of the output:
 .P
 [.]    RRSIG: example.com/8/31406 (2015-08-24 - 2015-09-14) [.]
 .P
-\fBnon-existent.example.com\fP
+\fBnonexistent.example.com\fP
 .P
 [.]  A: NXDOMAIN
 .P
@@ -296,13 +296,13 @@ warnings are present
 
 .P
 For example, a DNSKEY with warnings is shown as: [.?]  A DS corresponding to a
-non-existent DNSKEY is represented as: [-].
+nonexistent DNSKEY is represented as: [-].
 
 RRSIGs are shown below the RRset they cover, indented from the RRset.
 
 .SS Negative Responses
 If a response is negative, then the appropriate "NODATA" or "NXDOMAIN" text is
-shown adjacent the type queried, e.g., "A: NXDOMDAIN".  If there was an SOA
+shown adjacent the type queried, e.g., "A: NXDOMAIN".  If there was an SOA
 record and/or NSEC(3) proof, then they are listed below, indented from the
 query type.
 

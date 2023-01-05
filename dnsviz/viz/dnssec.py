@@ -1682,7 +1682,7 @@ class DNSAuthGraph:
         node_trusted = n.attr['color'] == COLORS['secure']
 
         if is_dnskey and not node_trusted:
-            # Here we are shortcutting the traversal because we are no longer
+            # Here we are short circuiting the traversal because we are no longer
             # propagating trust.  But we still need to learn of any DLV nodes.
             if not force:
                 S = self.G.get_subgraph(top_name[:-4])
@@ -1793,8 +1793,8 @@ class DNSAuthGraph:
             if INVIS_STYLE_RE.search(n.attr['style']) is not None:
                 continue
 
-            # if node is non-existent, then don't mark it, unless we are talking about an RRset
-            # or a non-existent trust anchor; it doesn't make sense to mark other nodes
+            # if node is nonexistent, then don't mark it, unless we are talking about an RRset
+            # or a nonexistent trust anchor; it doesn't make sense to mark other nodes
             # as bogus
             if DASHED_STYLE_RE.search(n.attr['style']) is not None and not (n.attr['shape'] == 'rectangle' or \
                     n.attr['peripheries'] == 2):
@@ -2000,7 +2000,7 @@ class DNSAuthGraph:
                     # top-level keys, to the top, or left alone.
                     for n in non_top_level_keys:
 
-                        # Non-existent DNSKEYs corresponding to DS and trust
+                        # Nonexistent DNSKEYs corresponding to DS and trust
                         # anchors should be connected to the top.
                         if n in non_existent_dnskeys:
                             if n in ds_dnskeys or n in ta_dnskeys:
@@ -2030,7 +2030,7 @@ class DNSAuthGraph:
                     if [x for x in self.G.out_neighbors(n) if x.startswith('DNSKEY') or x.startswith('NSEC')]:
                         continue
                     for m in intermediate_keys:
-                        # we only link to non-existent DNSKEYs corresponding to
+                        # we only link to nonexistent DNSKEYs corresponding to
                         # DS records if there aren't any existing DNSKEYs.
                         if m in ds_dnskeys and m in non_existent_dnskeys:
                             if existing_dnskeys:
@@ -2038,7 +2038,7 @@ class DNSAuthGraph:
                         self.G.add_edge(n, m, style='invis')
 
             else:
-                # For all non-existent non-DNSKEYs, add an edge to the top
+                # For all nonexistent non-DNSKEYs, add an edge to the top
                 for n in non_dnskey:
                     if [x for x in self.G.out_neighbors(n) if x.startswith('DNSKEY') or x.startswith('NSEC')]:
                         continue

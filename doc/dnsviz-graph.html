@@ -53,11 +53,11 @@
 					represented by a dashed, yellow line.</p></td></tr>
 			<tr><td><img src="images/delegation-secure.png"
 					alt="Secure delegation" /></td><td><p>If the delegation is
-					<strong>secure</strong> by DNSSEC standards, then then the delegation
+					<strong>secure</strong> by DNSSEC standards, then the delegation
 					is represented by a solid, blue line.</p></td></tr>
 			<tr><td><img src="images/delegation-bogus.png"
 					alt="Bogus delegation" /></td><td><p>If the delegation is
-					<strong>bogus</strong> by DNSSEC standards, then then the delegation
+					<strong>bogus</strong> by DNSSEC standards, then the delegation
 					is represented by a dashed, red line.</p></td></tr>
 		</table>
 
@@ -186,7 +186,7 @@
 						matched a DNSKEY prior to its revocation</strong>, but the
 					ramifications are the same as if it didn't match any DNSKEY.  The line
 					is simply drawn to help identify the cause of the otherwise
-					non-existent DNSKEY.</p><p>In the example at the left the key tag of
+					nonexistent DNSKEY.</p><p>In the example at the left the key tag of
 					the DS records isn't actually 54321; rather, 54321 is the new key tag
 					resulting from having set the revoke bit in the DNSKEY
 					RR.</p></td></tr>
@@ -286,7 +286,7 @@
 					matching DNSKEY is when <strong>the RRSIG matched a DNSKEY prior to its
 						revocation</strong>, but the ramifications are the same as if it
 					didn't match any DNSKEY.  The line is simply drawn to help identify the
-					cause of the otherwise non-existent DNSKEY.</p><p>In the example at the
+					cause of the otherwise nonexistent DNSKEY.</p><p>In the example at the
 					left the key tag of the RRSIG RR isn't actually 12345; rather, 12345 is
 					the new key tag resulting from having set the revoke bit in the DNSKEY
 					RR.</p></td></tr>
@@ -336,7 +336,7 @@
 					drawn from its node to nodes representing all other DNSKEY RRs in the
 					DNSKEY RRset.</p><p>If there is no true SEP, (e.g., no DS RRs in the
 					parent zone), then SEP(s) are inferred based on their signing role
-					(e.g., siging DNSKEY RRset or other RRsets) and properties (e.g., SEP
+					(e.g., signing DNSKEY RRset or other RRsets) and properties (e.g., SEP
 					bit).</p></td></tr>
 			<tr><td><img src="images/rrsig-ds.png"
 					alt="RRSIG covering a DS RRset" /></td><td><p>Like the DNSKEY
